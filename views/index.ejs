@@ -1,0 +1,16 @@
+<!-- index.ejs -->
+<html>
+  <head>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <a href="/new">Add new message</a>
+    <br />
+    <% messages.forEach((message, index) => { %>
+    <h3><%= message.user %></h3>
+    <p><%= message.text %></p>
+    <small><%= message.added %></small>
+    <a href="/detail/<%= index %>"> Check Details </a>
+    <% }); %>
+  </body>
+</html>
